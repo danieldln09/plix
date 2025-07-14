@@ -1,0 +1,350 @@
+:root {
+    --primary: #ffd600;
+    --secondary: #fff;
+    --accent: #ff0000;
+    --bg: #181818;
+    --text: #f0f0f0;
+    --card: #232323;
+    --facebook: #1877f3;
+    --instagram: #E4405F;
+    --telegram: #0088cc;
+    --apk: #12bb12;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card);
+    padding: 0.8rem 2rem;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    background: #000;
+}
+
+.logo span {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+nav ul li a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem 2rem 2rem;
+    background: linear-gradient(135deg, #111, #222 75%);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.btn-action {
+    display: inline-block;
+    background: var(--primary);
+    color: #222;
+    padding: 0.7rem 1.3rem;
+    border-radius: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 214, 0, 0.10);
+}
+
+.btn-action:hover {
+    background: var(--accent);
+    color: var(--secondary);
+}
+
+.btn-action.facebook {
+    background: var(--facebook);
+    color: #fff;
+}
+
+.btn-action.facebook:hover {
+    background: #145db2;
+}
+
+.btn-action.instagram {
+    background: var(--instagram);
+    color: #fff;
+}
+
+.btn-action.instagram:hover {
+    background: #a8325c;
+}
+
+.btn-action.telegram {
+    background: var(--telegram);
+    color: #fff;
+}
+
+.btn-action.telegram:hover {
+    background: #005f88;
+}
+
+.btn-action.apk {
+    background: var(--apk);
+    color: #fff;
+}
+
+.btn-action.apk:hover {
+    background: #0e8c0e;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: #222;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(255, 214, 0, 0.15);
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: var(--secondary);
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.about, .contact {
+    background: var(--card);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+}
+
+.about h2, .services h2, .contact h2 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service {
+    background: #111;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.service:hover {
+    box-shadow: 0 2px 18px rgba(255, 214, 0, 0.15);
+}
+
+.service h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact label {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.contact input, .contact textarea {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #fff3;
+    background: #222;
+    color: var(--text);
+    resize: none;
+}
+
+.contact button {
+    background: var(--primary);
+    color: #222;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact button:hover {
+    background: var(--accent);
+    color: var(--secondary);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0 0.6rem 0;
+    color: #888;
+    background: none;
+    margin-top: auto;
+    /* hace que el footer se mantenga abajo si la página es corta */
+}
+
+.footer-banner {
+    background: linear-gradient(90deg, #ffd600 0%, #fffde4 100%);
+    color: #222;
+    padding: 1.4rem 1rem 1.2rem 1rem;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    box-shadow: 0 4px 32px 0 rgba(255, 214, 0, 0.18);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border: 3px solid #ffeb3b;
+    max-width: 900px;
+}
+
+@media (max-width: 900px) {
+    .footer-banner {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem 0.9rem 0.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+    .hero-logo {
+        width: 90px;
+        height: 90px;
+    }
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+    .btn-group {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    .footer-banner {
+        font-size: 1rem;
+        padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+}
+
+/* Si quieres estilizar el mensaje 'Sin suscripción y seguro.' pon esto al final */
+.msg-sinsuscripcion {
+    color: var(--primary);
+    font-weight: bold;
+    margin-top: 1.2rem;
+    font-size: 1.15rem;
+    text-shadow: 0 1px 2px #222a;
+    letter-spacing: 0.5px;
+}
