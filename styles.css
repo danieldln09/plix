@@ -231,6 +231,7 @@ main {
 
 section {
     margin-bottom: 3rem;
+    scroll-margin-top: 90px; /* Para scroll más arriba del menú */
 }
 
 .about, .contact {
@@ -238,11 +239,6 @@ section {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 1px 8px rgba(0,0,0,0.08);
-}
-
-.about h2, .services h2, .contact h2, .gallery-section h2 {
-    color: var(--primary);
-    margin-bottom: 1.2rem;
 }
 
 /* Lista de características con emoji */
@@ -262,6 +258,11 @@ section {
 .about-plix .emoji-list li::before {
     content: "";
     display: none;
+}
+
+.about h2, .services h2, .contact h2, .gallery-section h2 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
 }
 
 .service-list {
