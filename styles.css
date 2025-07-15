@@ -231,7 +231,7 @@ main {
 
 section {
     margin-bottom: 3rem;
-    scroll-margin-top: 90px; /* Para scroll más arriba del menú */
+    scroll-margin-top: 90px;
 }
 
 .about, .contact {
@@ -241,7 +241,11 @@ section {
     box-shadow: 0 1px 8px rgba(0,0,0,0.08);
 }
 
-/* Lista de características con emoji */
+.about h2, .services h2, .contact h2, .gallery-section h2, .testimonials h2 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
 .about-plix .emoji-list {
     list-style: none;
     padding-left: 0;
@@ -258,11 +262,6 @@ section {
 .about-plix .emoji-list li::before {
     content: "";
     display: none;
-}
-
-.about h2, .services h2, .contact h2, .gallery-section h2 {
-    color: var(--primary);
-    margin-bottom: 1.2rem;
 }
 
 .service-list {
@@ -354,6 +353,59 @@ section {
     }
 }
 
+/* TESTIMONIOS */
+.testimonials {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 2.1rem 1.2rem;
+    box-shadow: 0 2px 18px #ffd60022, 0 2px 12px #222a;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.testimonial-list {
+    display: flex;
+    gap: 2.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+.testimonial {
+    background: #191919;
+    border-radius: 15px;
+    box-shadow: 0 3px 14px #ffd60011;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    max-width: 270px;
+    min-width: 180px;
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.18s, transform 0.19s;
+}
+.testimonial:hover {
+    box-shadow: 0 8px 38px #ffd60033, 0 1px 18px #222a;
+    transform: translateY(-4px) scale(1.03);
+}
+.testimonial img {
+    width: 54px; height: 54px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.5px solid var(--primary);
+    margin-bottom: 0.7rem;
+}
+.testimonial blockquote {
+    font-style: italic;
+    color: #ffe066;
+    margin-bottom: 0.7rem;
+    font-size: 1.01rem;
+}
+.testimonial .user {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.97rem;
+    letter-spacing: 0.4px;
+}
+
 .contact form {
     display: flex;
     flex-direction: column;
@@ -419,6 +471,10 @@ footer {
         font-size: 1.1rem;
         padding: 1rem 0.5rem 0.9rem 0.5rem;
     }
+    .testimonial-list {
+        flex-direction: column;
+        gap: 1.4rem;
+    }
 }
 
 @media (max-width: 700px) {
@@ -444,6 +500,7 @@ footer {
         font-size: 1rem;
         padding: 0.7rem 0.2rem 0.7rem 0.2rem;
     }
+    .testimonial { max-width: 98vw;}
 }
 
 @media (max-width: 500px) {
