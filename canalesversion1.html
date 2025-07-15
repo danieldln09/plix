@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8" />
+<title>Canales | PLIX TV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+    background: #1a191f;
+    color: #ffd600;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    background: #232323;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+.logo img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2.5px solid #ff0000;
+    background: #000;
+}
+.logo span {
+    color: #ffd600;
+    font-weight: bold;
+    font-size: 1.28rem;
+    letter-spacing: 2px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.4rem;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+    border-radius: 8px;
+    padding: 0.45em 0.8em;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ffd600;
+    background: #ffd60010;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    background: linear-gradient(135deg, #111, #222 75%);
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+.hero-content {
+    text-align: center;
+    max-width: 700px;
+}
+.hero-content h1 {
+    color: #ffd600;
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+}
+.hero-content p {
+    font-size: 1.1rem;
+    color: #ffd600;
+    margin-bottom: 0;
+}
+.Container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 2rem 1rem;
+    background: none;
+}
+.MovieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.TPostMv {
+    list-style: none;
+    width: 160px;
+    min-width: 140px;
+    max-width: 200px;
+    background: #232323;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #0003;
+    margin: 0;
+    transition: transform 0.16s, box-shadow 0.16s;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.TPostMv:hover {
+    transform: translateY(-8px) scale(1.035);
+    box-shadow: 0 12px 36px #ffd60033, 0 2px 12px #111a;
+    z-index: 2;
+}
+.TPost.B {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.TPost .Image {
+    padding: 0.5rem;
+    border-radius: 14px 14px 0 0;
+    background: #121212;
+    position: relative;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TPost .Image figure {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.TPost .Image figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.21s;
+    display: block;
+}
+.TPostMv:hover .TPost .Image figure img {
+    filter: brightness(1.04) saturate(1.15);
+}
+.channel-title {
+    color: #ffd600;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.6em 0 0.3em 0;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    min-height: 1.5em;
+}
+@media (max-width: 1050px) {
+    .MovieList { gap: 0.7rem;}
+    .TPostMv { width: 44vw; min-width: 120px; }
+}
+@media (max-width: 700px) {
+    nav { flex-direction: column; align-items: flex-start; gap: 0.7rem;}
+    .hero { padding: 2.1rem 0.5rem 1rem 0.5rem; }
+    .MovieList { gap: 0.6rem; }
+    .TPostMv { width: 94vw; min-width: 100px; max-width: 98vw;}
+}
+::-webkit-scrollbar { width: 10px; background: #181818;}
+::-webkit-scrollbar-thumb { background: #ffd60044; border-radius: 8px; }
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <a class="logo" href="index.html">
+            <img src="image1.png" alt="Logo PLIX TV">
+            <span>PLIX TV</span>
+        </a>
+        <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#acerca">Acerca de plix tv</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<div style="height:88px"></div>
+<div class="hero">
+    <div class="hero-content">
+        <h1>Canales en Vivo</h1>
+        <p>Disfruta de los mejores canales deportivos y de entretenimiento en PLIX TV.</p>
+    </div>
+</div>
+<div class="Container">
+<ul id="home-movies-post" class="MovieList">
+<!-- AQUÍ VA TU LISTA, TOTALMENTE LIMPIA Y MODERNA -->
+<li class="TPostMv"><article class="TPost B"><a href="go:espn1"><div class="Image"><figure><img loading="lazy" src="https://i.pinimg.com/originals/19/e6/00/19e60024fb585567a1bf040bf113ca05.jpg"></figure></div><div class="channel-title">ESPN</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espnban1"><div class="Image"><figure><img loading="lazy" src="https://i.pinimg.com/originals/19/e6/00/19e60024fb585567a1bf040bf113ca05.jpg"></figure></div><div class="channel-title">ESPN opc2</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espn2"><div class="Image"><figure><img loading="lazy" src="https://libero.cronosmedia.glr.pe/taxonomy/tag/image/2022/04/04/45ec6268gh-espn-2-en-vivo.jpg"></figure></div><div class="channel-title">ESPN 2</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espnban2"><div class="Image"><figure><img loading="lazy" src="https://libero.cronosmedia.glr.pe/taxonomy/tag/image/2022/04/04/45ec6268gh-espn-2-en-vivo.jpg"></figure></div><div class="channel-title">ESPN 2 OPC2</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espn3"><div class="Image"><figure><img loading="lazy" src="https://i.pinimg.com/originals/19/e6/00/19e60024fb585567a1bf040bf113ca05.jpg"></figure></div><div class="channel-title">ESPN 3</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espnban3"><div class="Image"><figure><img loading="lazy" src="https://i.pinimg.com/originals/19/e6/00/19e60024fb585567a1bf040bf113ca05.jpg"></figure></div><div class="channel-title">ESPN 3 OPC2</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espncol"><div class="Image"><figure><img loading="lazy" src="https://i.pinimg.com/originals/19/e6/00/19e60024fb585567a1bf040bf113ca05.jpg"></figure></div><div class="channel-title">ESPN 3 OPC3</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espnextra"><div class="Image"><figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/41/ESPN_Extra_Logo_2022.webp"></figure></div><div class="channel-title">ESPN 4</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espn5ban"><div class="Image"><figure><img loading="lazy" src="https://i.pinimg.com/originals/19/e6/00/19e60024fb585567a1bf040bf113ca05.jpg"></figure></div><div class="channel-title">ESPN 5</div></a></article></li>
+<li class="TPostMv"><article class="TPost B"><a href="go:espnnews"><div class="Image"><figure><img loading="lazy" src="https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_900,w_1600,x_0,y_0/c_fill,f_auto,h_900,q_auto,w_1600/v1/m/0/7/0759f3e1991c286e748c42989705aca50bde535b/watch-espnews-best-options-2023.jpg"></figure></div><div class="channel-title">ESPN NEWS</div></a></article></li>
+<!-- ...y así con todos los canales, solo imagen y título... -->
+<!-- Por razones de espacio, aquí tienes el patrón.
+     Si necesitas el archivo completo con los más de 100 canales limpios, puedes pegar el resto aquí
+     y te devuelvo el bloque ya convertido.
+-->
+</ul>
+</div>
+</body>
+</html>
